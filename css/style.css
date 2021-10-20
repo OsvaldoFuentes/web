@@ -17,6 +17,77 @@ Table Of Contents:
 ******************************************/
 
 
+/***********************/
+/* own styles*/
+/***********************/
+
+
+
+.imagen1{
+	width: 100%;
+	background-image: url(); 
+}
+
+.textHobbies{
+	color: white;
+}
+.containerHobbies{
+	background-color: #1c262f; 
+}
+
+.contenedor{
+	margin: auto;
+	width: 50%;
+	display: flex;
+	align-items: center;
+}
+
+.center {
+	text-align:center;
+}
+.avatar {
+	/*vertical-align: middle;*/
+	width: 210px;
+	height: 210px;
+	border-radius: 50%;
+
+
+}
+.circleAvatar{
+
+	margin:auto;
+	margin-bottom: 20px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 230px;
+	width: 230px;
+	background-color: #bbb;
+
+
+	border-radius: 50%;
+	/*display: inline-block;*/	
+	background: rgb(16,191,161);
+	background: linear-gradient(128deg, rgba(16,191,161,1) 0%, rgba(132,219,168,1) 50%, rgba(160,228,129,1) 100%);	
+	box-shadow: 0px 0px 40px 1px rgba(160,228,129,0.3);
+}
+
+
+.linkLlave{
+	font-size: 2em;
+	color: #bbb;
+	
+
+
+}
+.linkLlave:hover{
+	color: rgb(255, 255, 255);
+	text-shadow: 0px 0px 30px  rgb(139, 155, 132);
+}
+
+
 /**************************/
 /*     General Styles     */
 /**************************/
@@ -63,7 +134,13 @@ li {
 }
 
 /* Section Background */
-.home,
+.home{
+
+	position: relative;	
+}
+
+
+
 .about,
 .services,
 .plans,
@@ -72,6 +149,8 @@ li {
 	height: 110vh;
 	position: relative;
 }
+
+
 
 .services,
 .work,
@@ -133,7 +212,7 @@ li {
 	font-weight: 500;
 	font-size: 0.875rem;
 	line-height: 0.875rem;
-	background-color: var(--primary);
+	/*background-color: var(--primary);*/
 	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.025);
 }
 
@@ -143,8 +222,10 @@ li {
 }
 
 .navbar .logo-image img {
-	width: 108px;
-	height: 32px;
+	/*width: 50px;
+	height: 32px;*/
+	width: 75px;
+	height: 48px;	
 }
 
 .navbar .logo-text {
@@ -260,11 +341,12 @@ li {
 /*     Home     */
 /****************/
 .home {
-	background-image: url(../assets/images/home.jpg);
+	background-image: url(../assets/images/home2.png);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	z-index: 999;
 }
 
 .para {
@@ -276,6 +358,17 @@ li {
 }
 
 
+#canvas1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.0);
+    z-index: -1;
+}
+
+
 /***********************/
 /*     Information     */
 /***********************/
@@ -283,12 +376,25 @@ li {
   	background-color: var(--primary);
 }
 
+/*
 .information .container-fluid .row div:last-child {
   	background-color: white;
+}*/
+
+.information .container-fluid .row div:nth-child(1) {
+  	background-color: var(--primary);
+}
+.information .container-fluid .row div:nth-child(2) {
+	background-color: var(--primary);
+}
+.information .container-fluid .row div:nth-child(3) {
+	background-color: var(--primary);
 }
 
-.information .container-fluid .row div:nth-child(2) {
-  	background-color: var(--primary-light);
+.information .container-fluid .row {
+	width:100%;
+	padding: 0;
+	margin: 0;
 }
 
 
@@ -383,11 +489,11 @@ li {
 
 
 /************************/
-/*     Testimonials     */
+/*     Hobbies    */
 /************************/
 .slider-1 {
 	padding-top: 8.25rem;
-	padding-bottom: 8.5rem;
+	padding-bottom: 10rem;
 }
 
 .slider-1 .section-title {
@@ -399,11 +505,17 @@ li {
 	margin-bottom: 3rem;
 }
 
-.testimonial-card {
-	border: 10px solid;
+.hobbie-card {
+	border: 0px solid;
 	border-image-slice: 1;
 	border-width: 3px;
 	border-image-source: var(--gradient);
+	z-index: 999;
+}
+.hobbie-card:hover {
+	background-color: var(--primary-light);
+	box-shadow: 0px 0px 40px 1px rgba(160,228,129,0.3);
+	z-index: 9999;
 }
 
 .slider-1 .slider-container {
